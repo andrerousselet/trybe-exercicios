@@ -3,16 +3,25 @@
 }
 
 .goomba {
-  width: 100px;
+  width: 200px;
 }
 
 .baloon {
+  top: 600px;
+  position: absolute;
+  z-index: 1;
 }
 
 .speach {
-  font-size: 25px;
+  position: absolute;
+  font-size: 20px;
+  z-index: 2;
+  left: 50px;
 }
 
 .bowser {
-  width: 200px;
+  position: absolute;
+  z-index: 3;
+  left: 300px;
+  width: 300px;
 }
