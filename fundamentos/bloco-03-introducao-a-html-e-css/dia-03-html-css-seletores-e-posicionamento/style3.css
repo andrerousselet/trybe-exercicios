@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+}
+
+h1,
+p {
+  text-align: center;
+}
+
+li:hover {
+  background-color: grey;
+}
+
+li:active {
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+}
+
+li {
+  list-style: none;
+}
