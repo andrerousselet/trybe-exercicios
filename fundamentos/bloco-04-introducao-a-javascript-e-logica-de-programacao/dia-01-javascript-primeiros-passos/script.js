@@ -30,3 +30,34 @@ if (e > f && e > g) {
 } else {
   console.log(g);
 }
+
+// Exercicio 4
+const num = 1;
+
+if (num > 0) {
+  console.log('positive');
+} else if (num < 0) {
+  console.log('negative');
+} else {
+  console.log('zero');
+}
+
+// Exercicio 5
+
+
+// Exercicio 6
+
+
+// Exercicio 7
+
+
+// Exercicio 8
+
+
+// Exercicio 9
+
+
+// Exercicio 10
+
+
+// Exercicio 11
