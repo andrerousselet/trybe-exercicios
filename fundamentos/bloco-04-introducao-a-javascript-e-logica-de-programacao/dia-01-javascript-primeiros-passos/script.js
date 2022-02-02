@@ -17,3 +17,16 @@ if (c > d) {
 } else {
   console.log(d);
 }
+
+// Exercicio 3
+const e = 5;
+const f = 3;
+const g = 8;
+
+if (e > f && e > g) {
+  console.log(e);
+} else if (f > e && f > g) {
+  console.log(f);
+} else {
+  console.log(g);
+}
