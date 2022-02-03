@@ -43,7 +43,19 @@ if (num > 0) {
 }
 
 // Exercicio 5
+const ang1 = 60;
+const ang2 = 60;
+const ang3 = 60;
 
+let soma = (ang1 + ang2 + ang3);
+
+if (ang1 < 0 || ang2 < 0 || ang3 < 0) {
+    console.log('erro')
+} else if (soma === 180) {
+    console.log(true)
+} else {
+    console.log(false)
+};
 
 // Exercicio 6
 
@@ -67,7 +79,7 @@ function converteNota(porcentagem) {
   }
   return nota
 }
-console.log(converteNota(80));
+converteNota(80);
 
 // Exercicio 8
 
