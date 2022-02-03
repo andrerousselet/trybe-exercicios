@@ -125,6 +125,15 @@ if ((num1 % 2) !== 0 || (num2 % 2) !== 0 || (num3 % 2) !== 0) {
 };
 
 // Exercicio 10
+let valorCusto = 150;
+let valorVenda = 200;
+let valorCustoTotal = valorCusto + (valorCusto * 0.2);
+let lucro = valorVenda - valorCustoTotal;
 
+if (valorCusto < 0 || valorVenda < 0) {
+  console.log('erro');
+} else {
+  console.log(lucro * 1000);
+}
 
 // Exercicio 11
