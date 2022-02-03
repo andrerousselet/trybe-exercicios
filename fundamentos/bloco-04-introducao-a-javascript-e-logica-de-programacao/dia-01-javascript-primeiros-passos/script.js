@@ -58,7 +58,28 @@ if (ang1 < 0 || ang2 < 0 || ang3 < 0) {
 };
 
 // Exercicio 6
+let chessPiece = 'knight';
+let move = '';
 
+if (chessPiece === 'pawn') {
+  move = 'forth and back';
+  console.log(move);
+} else if (chessPiece === 'bishop') {
+  move = 'diagonals';
+  console.log(move);
+} else if (chessPiece === 'queen') {
+  move = 'all around; multiple squares';
+  console.log(move);
+} else if (chessPiece === 'king') {
+  move = 'all around; only one square';
+  console.log(move);
+} else if (chessPiece === 'knight') {
+  move = 'the "L": two squares vertically and one square horizontally, or two squares horizontally and one square vertically';
+  console.log(move);
+} else if (chessPiece === 'rook') {
+  move = 'forth and back, and also sideways; multiple squares';
+  console.log(move);
+};
 
 // Exercicio 7
 function converteNota(porcentagem) {
