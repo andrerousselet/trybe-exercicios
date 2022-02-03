@@ -19,21 +19,21 @@ O programa conta com mais de 1.500 horas de aulas online ao vivo, aborda introdu
 
 - [x] 1: _Git & GitHub - O que é e para que serve?_
 - [x] 2: _Git & GitHub - Entendendo os comandos_
-- [ ] 3: _Internet - Entendendo como ela funciona_
+- [x] 3: _Internet - Entendendo como ela funciona_
 
 #### Bloco 3: Introdução à HTML & CSS
 
-- [ ] 1: _Introdução - HTML & CSS_
-- [ ] 1: _HTML & CSS - Estruturas de página_
-- [ ] 2: _HTML & CSS - Primeiros passos em CSS_
-- [ ] 3: _HTML & CSS - Seletores e posicionamento_
-- [ ] 4: _HTML Semântico_
-- [ ] 5: _[Projeto - Lessons Learned]()_
+- [x] 1: _Introdução - HTML & CSS_
+- [x] 1: _HTML & CSS - Estruturas de página_
+- [x] 2: _HTML & CSS - Primeiros passos em CSS_
+- [x] 3: _HTML & CSS - Seletores e posicionamento_
+- [x] 4: _HTML Semântico_
+- [x] 5: _[Projeto - Lessons Learned]()_
 
 #### Bloco 4: Introdução à JavaScript e Lógica de Programação
 
-- [ ] 1: _Introdução - JavaScript_
-- [ ] 1: _JavaScript - Primeiros passos_
+- [x] 1: _Introdução - JavaScript_
+- [x] 1: _JavaScript - Primeiros passos_
 - [ ] 2: _JavaScript - Array e loop For_
 - [ ] 3: _JavaScript - Lógica de Programação e Algoritmos_
 - [ ] 4: _JavaScript - Objetos e funções_
