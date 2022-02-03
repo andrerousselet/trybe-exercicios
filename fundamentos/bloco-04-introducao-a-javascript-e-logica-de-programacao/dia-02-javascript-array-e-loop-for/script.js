@@ -74,3 +74,14 @@ if (numerosImpares === 0) {
 } else {
   console.log(numerosImpares);
 };
+
+
+//Exercicio 7
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let smallestNumber = numbers[0];
+for (i = 0; i < numbers.length; i += 1) {
+  if (numbers[i] < smallestNumber) {
+    smallestNumber = numbers[i];
+  }
+};
+console.log(smallestNumber);
