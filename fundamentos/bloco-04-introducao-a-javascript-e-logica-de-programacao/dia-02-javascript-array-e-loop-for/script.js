@@ -49,3 +49,28 @@ for (i = 0; i < numbers.length; i += 1) {
   }
 }
 console.log(biggestNumber);
+
+//Exercicio 5 - usando for/of
+// let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+// let biggestNumber = 0;
+// for (let numero of numbers) {
+//   if (numero > biggestNumber) {
+//     biggestNumber = numero;
+//   }
+// };
+// console.log(biggestNumber);
+
+
+//Exercicio 6
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let numerosImpares = 0;
+for (i = 0; i < numbers.length; i += 1) {
+  if ((numbers[i] % 2) !== 0) {
+    numerosImpares += 1;
+  }
+};
+if (numerosImpares === 0) {
+  console.log(`Nenhum valor ímpar encontrado`);
+} else {
+  console.log(numerosImpares);
+};
