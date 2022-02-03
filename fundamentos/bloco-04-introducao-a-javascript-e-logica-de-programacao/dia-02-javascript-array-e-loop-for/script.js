@@ -90,11 +90,26 @@ console.log(smallestNumber);
 //Exercicio 8
 let array = [];
 
-for (let i = 0; i < 25; i++) {
+for (let i = 0; i < 25; i += 1) {
+  if (array[0] === undefined) {
+    console.log(array.push(1));
+  } else {
+    console.log(array.push((array.length) + 1));
+  }
+};
+console.log(array);
+
+
+//Exercicio 9
+let array = [];
+
+for (let i = 0; i < 25; i += 1) {
   if (array[0] === undefined) {
     array.push(1);
   } else {
     array.push((array.length) + 1);
   }
 };
-console.log(array);
+for (let number of array) {
+  console.log(number/2);
+}
