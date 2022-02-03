@@ -85,3 +85,16 @@ for (i = 0; i < numbers.length; i += 1) {
   }
 };
 console.log(smallestNumber);
+
+
+//Exercicio 8
+let array = [];
+
+for (let i = 0; i < 25; i++) {
+  if (array[0] === undefined) {
+    array.push(1);
+  } else {
+    array.push((array.length) + 1);
+  }
+};
+console.log(array);
