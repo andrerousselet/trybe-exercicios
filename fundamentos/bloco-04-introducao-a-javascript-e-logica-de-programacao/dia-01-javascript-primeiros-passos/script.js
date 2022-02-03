@@ -137,3 +137,49 @@ if (valorCusto < 0 || valorVenda < 0) {
 }
 
 // Exercicio 11
+let salarioBruto = '2600';
+let inss = '';
+let salarioBase = '';
+let ir = '';
+let salarioLiquido = '';
+
+console.log(`Salário bruto de R$${salarioBruto}`);
+
+if (salarioBruto > 5189.82) {
+  inss = 570.88;
+  console.log(`INSS - alíquota máxima -> R$${inss}`);
+} else if (salarioBruto > 2594.92 && salarioBruto <= 5189.82) {
+  inss = salarioBruto * 0.11;
+  console.log(`INSS - alíquota de 11% -> R$${inss}`);
+} else if (salarioBruto > 1556.94 && salarioBruto <= 2594.92) {
+  inss =  salarioBruto * 0.09;
+  console.log(`INSS - alíquota de 9% -> R$${inss}`);
+} else {
+  inss = salarioBruto * 0.08;
+  console.log(`INSS - alíquota de 8% -> R$${inss}`);
+};
+
+salarioBase = salarioBruto - inss;
+
+console.log(`Salário-base de R$${salarioBase}`);
+
+if (salarioBase > 4664.68) {
+  ir = salarioBase * 0.275 - 869.36;
+  console.log(`IR de 27,5% e dedução de R$869,36 -> R$${ir}`);
+} else if (salarioBase > 3751.05 && salarioBase <= 4664.68) {
+  ir = salarioBase * 0.225 - 636.13;
+  console.log(`IR de 22,5% e dedução de R$636,13 -> R$${ir}`);
+} else if (salarioBase > 2826.65 && salarioBase <= 3751.05) {
+  ir = salarioBase * 0.15 - 354.80;
+  console.log(`IR de 15% e dedução de R$354,80 -> R$${ir}`);
+} else if (salarioBase > 1903.98 && salarioBase <= 2826.65) {
+  ir = salarioBase * 0.075 - 142.80;
+  console.log(`IR de 7,5% e dedução de R$142,80 -> R$${ir}`);
+} else {
+  ir = 0;
+  console.log(`Isento de IR`);
+};
+
+salarioLiquido = salarioBase - ir;
+
+console.log(`Salário líquido de R$${salarioLiquido}`);
