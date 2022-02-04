@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <button onclick="myFunction1()">Sort Alphabetically</button>
+  <button onclick="myFunction2()">Sort Numerically</button>
+
+  <p id="demo"></p>
+
+  <script>
+    const points = [50, 47, 35, 18, 40, 100, 1, 5, 25, 10];
+    document.getElementById("demo").innerHTML = points;
+
+    function myFunction1() {
+      points.sort();
+      document.getElementById("demo").innerHTML = points;
+    }
+
+    function myFunction2() {
+      points.sort(function (a, b) { return a - b });
+      document.getElementById("demo").innerHTML = points;
+    }
+  </script>
+</body>
+
+</html>

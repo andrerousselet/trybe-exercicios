@@ -113,3 +113,21 @@ for (let i = 0; i < 25; i += 1) {
 for (let number of array) {
   console.log(number/2);
 }
+
+
+//Bônus 1
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+numbers.sort(function(a, b) {
+  return a - b;
+});
+console.log(numbers);
+//Código copiado de (https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) e (https://www.w3schools.com/js/js_array_sort.asp)
+
+
+//Bônus 2
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+numbers.sort(function(a, b) {
+  return b - a;
+});
+console.log(numbers);
+//Código copiado de (https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) e (https://www.w3schools.com/js/js_array_sort.asp)
