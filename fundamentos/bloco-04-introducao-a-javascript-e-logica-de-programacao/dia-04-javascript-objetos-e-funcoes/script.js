@@ -28,6 +28,7 @@ let info2 = {
   nota: 'O último MacPatinhas',
   recorrente: 'Sim',
 };
+//Contribuição do aluno x (não lembro o nome...) durante a mentoria do Matheus - dia 07 de Fev
 for (let key in info) {
   if (key === 'recorrente' && info[key] === 'Sim' && info2[key] === 'Sim') {
     console.log('Ambos recorrentes');
