@@ -75,4 +75,31 @@ function verificaPalindrome(word) {
   return false
 };
 console.log(verificaPalindrome('arara'));
+console.log(verificaPalindrome('desenvolvimento'));
 //código pesquisado no site: https://www.freecodecamp.org/news/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb/
+
+
+//Exercicio 2
+function indiceDeMaiorValor (array) {
+  let biggest = 0;
+  for (let key in array) {
+    if (array[key] > biggest) {
+      biggest = array[key];
+    }
+  }
+  return array.indexOf(biggest);
+};
+console.log(indiceDeMaiorValor([2, 3, 6, 7, 10, 1]));
+
+//Exercicio 3
+function indiceDeMenorValor (array) {
+//  let smallest = array[indiceDeMaiorValor(array)];
+  let smallest = 10e10;
+  for (let key in array) {
+    if (array[key] < smallest) {
+      smallest = array[key];
+    }
+  }
+  return array.indexOf(smallest);
+};
+console.log(indiceDeMenorValor([2, 4, 6, 7, 10, 0, -3]));
