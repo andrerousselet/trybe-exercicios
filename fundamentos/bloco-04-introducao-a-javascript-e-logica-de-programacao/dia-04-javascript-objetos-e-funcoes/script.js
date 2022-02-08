@@ -1,3 +1,4 @@
+//PARTE I - Objects e Funções
 let info = {
   personagem: 'Margarida',
   origem: 'Pato Donald',
@@ -63,3 +64,15 @@ console.log(leitor);
 
 //Exercicio 8
 console.log(leitor.nome + ' tem ' + leitor.livrosFavoritos.length + ' livros favoritos.');
+
+
+// PARTE II - Funções
+//Exercicio 1
+function verificaPalindrome(word) {
+  if (word.split('').reverse().join('') === word) {
+    return true;
+  }
+  return false
+};
+console.log(verificaPalindrome('arara'));
+//código pesquisado no site: https://www.freecodecamp.org/news/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb/
