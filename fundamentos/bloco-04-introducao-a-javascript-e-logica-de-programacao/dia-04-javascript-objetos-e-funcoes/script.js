@@ -103,3 +103,23 @@ function indiceDeMenorValor (array) {
   return array.indexOf(smallest);
 };
 console.log(indiceDeMenorValor([2, 4, 6, 7, 10, 0, -3]));
+
+
+//Alternativa para exercicios 2 - https://bobbyhadz.com/blog/javascript-get-index-of-max-value-in-array
+function indiceDeMaiorValor (array) {
+  let max = Math.max(...array);
+  return array.indexOf(max);
+};
+console.log(indiceDeMaiorValor([2, 3, 6, 7, 10, 1]));
+
+//Alternativa para exercicios 3 - https://bobbyhadz.com/blog/javascript-get-index-of-min-value-in-array
+function indiceDeMenorValor (array) {
+  let min = Math.min(...array);
+  return array.indexOf(min);
+};
+console.log(indiceDeMenorValor([2, 4, 6, 7, 10, 0, -3]));
+
+//spread operator (...) = unpacks the values from the array and pass them as multiple, comma-separated arguments.
+
+
+//Exercicio 4
