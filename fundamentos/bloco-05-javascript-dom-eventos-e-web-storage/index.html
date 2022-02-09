@@ -21,13 +21,13 @@
       background-color: yellow;
     }
 
-    .main-content .center-content {
+    .main-content #center-content {
       background-color: red;
       width: 50%;
       margin: 0 auto;
     }
 
-    .main-content .center-content p {
+    .main-content #center-content p {
       font-style: italic;
     }
   </style>
@@ -38,7 +38,7 @@
     <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
   </header>
   <main class="main-content">
-    <section class="center-content">
+    <section id="center-content">
       <p>Texto padrão do nosso site</p>
       <p>-----</p>
       <p>Trybe</p>
@@ -78,7 +78,12 @@
     changeColorOfBigSquare('main-content');
     
     // Crie uma função que mude a cor do quadrado vermelho para branco.
+
+    function changeColorOfSmallSquare(element) {
+      document.getElementById(element).style.background = 'white';
+    }
     
+    changeColorOfSmallSquare('center-content');
     
     // Crie uma função que corrija o texto da tag <h1>.
     
