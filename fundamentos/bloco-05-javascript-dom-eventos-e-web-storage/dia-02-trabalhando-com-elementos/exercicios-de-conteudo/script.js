@@ -43,3 +43,9 @@ let ondeEstou2 = document.getElementById('primeiroFilhoDoFilho');
 let filhoDoFilho2 = document.createElement('section');
 filhoDoFilho2.id = 'filho-do-primeiroFilhoDoFilho';
 ondeEstou2.appendChild(filhoDoFilho2);
+
+
+// Remova todos os elementos filhos de paiDoPai exceto pai , elementoOndeVoceEsta e primeiroFilhoDoFilho.
+document.getElementById('primeiroFilho').remove();
+document.getElementsByClassName('netos')[0].remove();
+//etc
