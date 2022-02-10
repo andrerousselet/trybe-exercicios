@@ -1,3 +1,8 @@
+function generateElement(element) {
+  let newElement = document.createElement(element);
+  return newElement;
+}
+
 //Exercicio 1 - Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body.
 let body = document.querySelector('body');
 let h1Title = document.createElement('h1');
@@ -13,3 +18,8 @@ body.appendChild(main);
 let section = document.createElement('section');
 section.className = 'center-content';
 main.appendChild(section);
+
+//Exercicio 4 - Adicione a tag p como filho do section criado no passo 3 e coloque algum texto.
+let tagP = generateElement('p');
+tagP.innerText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.';
+section.appendChild(tagP);
