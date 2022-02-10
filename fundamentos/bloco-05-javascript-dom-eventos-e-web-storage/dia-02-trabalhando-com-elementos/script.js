@@ -43,3 +43,10 @@ image.setAttribute('src', 'https://picsum.photos/200');
 addElement(section2, image);
 // Pesquisa na documentação sobre como adicionar outros atributos além de classe e id, no site https://www.w3schools.com/jsref/met_element_setattribute.asp.
 
+//Exercicio 8 - Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um , dois , três , ... como valores da lista. Essa lista deve ser filha do section criado no passo 6.
+let lista = generateElement('ul', 'unordered-list');
+addElement(section3, lista);
+for (i = 0; i < 10; i += 1) {
+  item = generateElement('li', 'list-items');
+  addElement(lista, item);
+}
