@@ -1,6 +1,11 @@
-function generateElement(element) {
+function generateElement(element, className) {
   let newElement = document.createElement(element);
+  newElement.className = className;
   return newElement;
+}
+
+function addElement(father, child) {
+  father.appendChild(child);
 }
 
 //Exercicio 1 - Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body.
@@ -23,3 +28,11 @@ main.appendChild(section);
 let tagP = generateElement('p');
 tagP.innerText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.';
 section.appendChild(tagP);
+
+//Exercicio 5 - Adicione a tag section com a classe left-content como filho da tag main criada no passo 2.
+let section2 = generateElement('section', 'left-content');
+addElement(main, section2);
+
+//Exercicio 6 - Adicione a tag section com a classe right-content como filho da tag main criada no passo 2.
+let section3 = generateElement('section', 'right-content');
+addElement(main, section3);
