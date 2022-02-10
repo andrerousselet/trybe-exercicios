@@ -3,8 +3,7 @@
     - document.getElementById()
     - document.getElementsByClassName()
     - document.getElementsByTagName()
-    */
-
+  */
 
     // Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
     function changeTextInTagP(element) {
@@ -49,10 +48,10 @@
     // Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
     function changeToUpper(element) {
       let paragraphs = document.getElementsByTagName(element);
-      for (let item in paragraphs) {
-        paragraphs[0].innerText.toUpperCase();
-      }
-      return paragraphs[0];
+      // for (let index = 0; index < paragraphs.length; index += 1) {
+      //   paragraphs[index].innerText = paragraphs[index].innerText.toUpperCase();
+      // }
+      paragraphs[0].innerText = paragraphs[0].innerText.toUpperCase();
     }
     changeToUpper('p');
 
@@ -63,3 +62,4 @@
         console.log(paragraphs[i].innerText);
       }
     }
+    showInConsole('p');
