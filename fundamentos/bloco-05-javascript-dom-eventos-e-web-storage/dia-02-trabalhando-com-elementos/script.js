@@ -36,3 +36,10 @@ addElement(main, section2);
 //Exercicio 6 - Adicione a tag section com a classe right-content como filho da tag main criada no passo 2.
 let section3 = generateElement('section', 'right-content');
 addElement(main, section3);
+
+//Exercicio 7 - Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image . Esse elemento deve ser filho do section criado no passo 5.
+let image = generateElement('img', 'small-image');
+image.setAttribute('src', 'https://picsum.photos/200');
+addElement(section2, image);
+// Pesquisa na documentação sobre como adicionar outros atributos além de classe e id, no site https://www.w3schools.com/jsref/met_element_setattribute.asp.
+
