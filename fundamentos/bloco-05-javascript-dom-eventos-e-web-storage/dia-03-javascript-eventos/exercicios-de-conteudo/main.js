@@ -12,18 +12,23 @@ const lis = document.getElementsByTagName('li');
 
 
 // 2. Crie uma função que adicione a classe 'tech' ao elemento `li` quando for clicado.
-function addClassTech(element, classe) {
-  for (let li of lis) {
-    li.addEventListener('click', function() {
-      li.className = classe;
-    })
-    element = li;
-  }
-}
-addClassTech('li', 'tech');
+// for (let li of lis) {
+//   li.addEventListener('click', addClassTech)
+// }
+// function addClassTech(event) {
+//   event.target.className = 'tech';
+// }
 
 // 2.1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
-
+for (let li of lis) {
+  li.addEventListener('click', addClassTech)
+}
+function addClassTech(event) {
+  for (let li of lis) {
+    li.classList.remove('tech');
+  }
+  event.target.className = 'tech';
+}
 
 // 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
