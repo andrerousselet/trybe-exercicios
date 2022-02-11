@@ -46,7 +46,14 @@ addElement(section2, image);
 //Exercicio 8 - Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um , dois , três , ... como valores da lista. Essa lista deve ser filha do section criado no passo 6.
 let lista = generateElement('ul', 'unordered-list');
 addElement(section3, lista);
-for (i = 0; i < 10; i += 1) {
-  item = generateElement('li', 'list-items');
+// for (i = 0; i < 10; i += 1) {
+//   let item = generateElement('li', 'list-items');
+//   addElement(lista, item);
+//   console.log(item);
+// }
+let listaDeNumerosPorEscrito = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez']
+for (i = 0; i < listaDeNumerosPorEscrito.length; i += 1) {
+  let item = generateElement('li', 'list-items');
   addElement(lista, item);
+  item.innerText = listaDeNumerosPorEscrito[i]
 }
