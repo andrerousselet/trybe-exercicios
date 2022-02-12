@@ -33,22 +33,28 @@ function addClassTech(event) {
 }
 
 // 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento com a classe 'tech';
-let inputText = document.querySelector('input');
-inputText.addEventListener('keyup', changeText)
+input.addEventListener('keyup', changeText)
+
 function changeText() {
   for (let li of lis) {
     if (li.className === 'tech') {
-      li.innerText = inputText.value;
+      li.innerText = input.value;
     }
   }
 }
 
-// 4. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
-// redirecione para alguma página;
+// 4. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele redirecione para alguma página;
 // 4.1. Que tal redirecionar para seu portfólio?
+myWebpage.addEventListener('dblclick', redirectTo)
 
-// 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
-// a cor do mesmo;
+function redirectTo() {
+  window.location.href = 'https://andrerousselet.github.io/'
+}
+// Pesquisa no site https://www.w3schools.com/howto/howto_js_redirect_webpage.asp
+
+// 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere a cor do mesmo;
+
+
 
 // Segue abaixo um exemplo do uso de event.target:
 
