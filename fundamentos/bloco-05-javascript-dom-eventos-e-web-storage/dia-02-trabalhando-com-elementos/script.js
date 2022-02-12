@@ -57,3 +57,10 @@ for (i = 0; i < listaDeNumerosPorEscrito.length; i += 1) {
   addElement(lista, item);
   item.innerText = listaDeNumerosPorEscrito[i]
 }
+
+// Exercicio 9 - Adicione 3 tags h3 , todas sendo filhas do main criado no passo 2.
+for (let index = 0; index < 3; index += 1) {
+  let h3SubTitle = generateElement('h3', 'h3-subtitles');
+  addElement(main, h3SubTitle);
+  h3SubTitle.innerText = 'Sub-títulos'
+}
