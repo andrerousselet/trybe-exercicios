@@ -23,6 +23,7 @@ const lis = document.getElementsByTagName('li');
 for (let li of lis) {
   li.addEventListener('click', addClassTech);
   li.addEventListener('keyup', changeText)
+  li.addEventListener('dblclick', resetText);
 }
 function addClassTech(event) {
   for (let li of lis) {
@@ -59,7 +60,7 @@ function resetText(event) {
   // que retorna o objeto que disparou o evento.
 }
 
-firstLi.addEventListener('dblclick', resetText);
+// firstLi.addEventListener('dblclick', resetText);
 
 // Não precisa passar o parâmetro dentro da callback resetText. O próprio
 // navegador fará esse trabalho por você, não é legal? Desse jeito, o
