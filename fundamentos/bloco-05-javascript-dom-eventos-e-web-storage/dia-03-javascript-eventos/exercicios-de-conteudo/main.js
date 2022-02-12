@@ -86,3 +86,8 @@ function resetText(event) {
 // navegador fará esse trabalho por você, não é legal? Desse jeito, o
 // event.target na nossa função retornará o objeto 'firstLi'.
 
+let newElement = document.createElement('p');
+input.addEventListener('change', function() {
+  newElement.innerText = input.value;
+  document.querySelector('main').appendChild(newElement);
+})
