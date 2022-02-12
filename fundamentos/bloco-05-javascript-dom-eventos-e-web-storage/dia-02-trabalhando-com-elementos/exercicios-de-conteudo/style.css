@@ -1,0 +1,40 @@
+section {
+  border: 1px solid black;
+}
+
+#pai {
+  height: 900px;
+  text-align: center;
+}
+
+.filhos {
+  height: 200px;
+  margin: 5px;
+}
+
+#primeiroFilhoDoFilho {
+  height: 29%;
+  margin: 5px;
+  font-size: 13px;
+  text-align: justify;
+}
+
+#filho-do-primeiroFilhoDoFilho {
+  margin: 5px 15px;
+  height: 8px;
+}
+
+#segundoEUltimoFilhoDoFilho {
+  margin: 5px;
+  height: 29%;
+}
+
+#novo-filho-criado {
+  margin: 5px;
+  height: 29%;
+}
+
+#novo-irmao {
+  margin: 5px;
+  height: 36px;
+}
