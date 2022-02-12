@@ -52,6 +52,7 @@ addElement(section3, lista);
 //   console.log(item);
 // }
 let listaDeNumerosPorEscrito = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez']
+// listaDeNumerosPorEscrito.pop();
 for (i = 0; i < listaDeNumerosPorEscrito.length; i += 1) {
   let item = generateElement('li', 'list-items');
   addElement(lista, item);
@@ -60,7 +61,31 @@ for (i = 0; i < listaDeNumerosPorEscrito.length; i += 1) {
 
 // Exercicio 9 - Adicione 3 tags h3 , todas sendo filhas do main criado no passo 2.
 for (let index = 0; index < 3; index += 1) {
-  let h3SubTitle = generateElement('h3', 'h3-subtitles');
+  let h3SubTitle = generateElement('h3', '');
   addElement(main, h3SubTitle);
   h3SubTitle.innerText = 'Sub-títulos'
+  h3SubTitle.classList.add('description');
+}
+
+// PARTE 2
+//Exercicio 1 - Adicione a classe title na tag h1 criada;
+h1Title.classList.add('title');
+// https://www.w3schools.com/jsref/prop_element_classlist.asp
+
+//Exercicio 2 - Adicione a classe description nas 3 tags h3 criadas;
+//Resolvido no exercicio 9.
+
+//Exercicio 3 - Remova a section criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild();
+main.removeChild(section2);
+
+//Exercicio 4 - Centralize a section criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto da section;
+section3.style.marginRight = 'auto';
+//https://www.w3schools.com/jsref/prop_style_marginright.asp
+
+//Exercicio 5 - Troque a cor de fundo do elemento pai da section criada no passo 3 (aquela que possui a classe center-content ) para a cor verde;
+section.style.background = 'green';
+
+//Exercicio 6 - Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
+for (i=0;i<2;i++) {
+  lista.lastElementChild.remove();
 }
