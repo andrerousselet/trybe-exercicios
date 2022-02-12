@@ -22,7 +22,7 @@ const lis = document.getElementsByTagName('li');
 // 2.1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
 for (let li of lis) {
   li.addEventListener('click', addClassTech);
-  li.addEventListener('keyup', changeText)
+  li.addEventListener('keyup', changeText);
   li.addEventListener('dblclick', resetText);
 }
 function addClassTech(event) {
@@ -33,7 +33,7 @@ function addClassTech(event) {
 }
 
 // 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento com a classe 'tech';
-input.addEventListener('keyup', changeText)
+input.addEventListener('keyup', changeText);
 
 function changeText() {
   for (let li of lis) {
@@ -45,16 +45,30 @@ function changeText() {
 
 // 4. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele redirecione para alguma página;
 // 4.1. Que tal redirecionar para seu portfólio?
-myWebpage.addEventListener('dblclick', redirectTo)
+myWebpage.addEventListener('dblclick', redirectTo);
 
 function redirectTo() {
-  window.location.href = 'https://andrerousselet.github.io/'
+  window.location.href = 'https://andrerousselet.github.io/';
 }
 // Pesquisa no site https://www.w3schools.com/howto/howto_js_redirect_webpage.asp
 
 // 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere a cor do mesmo;
+myWebpage.addEventListener('mouseover', changeColor);
+// myWebpage.addEventListener('mousemove', setPartyColor);
+myWebpage.addEventListener('mouseleave', resetColor)
+let originalColor = myWebpage.style.color;
 
+function changeColor() {
+  myWebpage.style.color = 'pink';
+}
 
+// function setPartyColor() {
+//   myWebpage.style.color = 'purple';
+// }
+
+function resetColor() {
+  myWebpage.style.color = originalColor;
+}
 
 // Segue abaixo um exemplo do uso de event.target:
 
