@@ -48,4 +48,20 @@ for (let index = 0; index < array.length; index += 1) {
 console.log(smallestWord);
 
 
-//Exercicio 4
+//Exercicio 4 - https://www.programiz.com/javascript/examples/prime-number
+function highestPrimeNumber(limit) {
+  let highestPrime = 0;
+  for (let index = 2; index <= limit; index += 1) {
+    let primeNumbers = [];
+    for (let index2 = 2; index2 <= limit; index2 += 1) {
+      if (index % index2 === 0) {
+        primeNumbers.push(index2);
+        if (primeNumbers.length === 1 && index === primeNumbers[0]) {
+          highestPrime = primeNumbers[0];
+        }
+      }
+    }
+  }
+  return highestPrime;
+}
+console.log(highestPrimeNumber(50));
