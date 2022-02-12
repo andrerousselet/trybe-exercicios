@@ -21,7 +21,8 @@ const lis = document.getElementsByTagName('li');
 
 // 2.1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
 for (let li of lis) {
-  li.addEventListener('click', addClassTech)
+  li.addEventListener('click', addClassTech);
+  li.addEventListener('keyup', changeText)
 }
 function addClassTech(event) {
   for (let li of lis) {
@@ -30,8 +31,16 @@ function addClassTech(event) {
   event.target.className = 'tech';
 }
 
-// 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
-// com a classe 'tech';
+// 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento com a classe 'tech';
+let inputText = document.querySelector('input');
+inputText.addEventListener('keyup', changeText)
+function changeText() {
+  for (let li of lis) {
+    if (li.className === 'tech') {
+      li.innerText = inputText.value;
+    }
+  }
+}
 
 // 4. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;
