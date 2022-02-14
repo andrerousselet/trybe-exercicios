@@ -134,3 +134,15 @@ function maiorPalavra(array) {
 }
 
 console.log(maiorPalavra(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
+
+//Exercicio 5
+function numeroDeMarioRepeticao(array) {
+  for (let numero of array) {
+    let contador = 0;
+    for (let numero2 of array) {
+      if (numero === numero2) {
+        contador += 1;
+      }
+    }
+  }
+}
