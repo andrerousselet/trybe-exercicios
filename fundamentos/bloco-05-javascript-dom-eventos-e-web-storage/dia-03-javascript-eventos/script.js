@@ -39,12 +39,27 @@ function createDaysOfTheMonth() {
 createDaysOfTheMonth()
 
 //Exercicio 2
+let holidayBtn = document.createElement('button');
+
 function createHolidaysButton(name) {
   let btnContainer = document.querySelector('.buttons-container');
-  let holidayBtn = document.createElement('button');
   holidayBtn.id = 'btn-holiday';
   holidayBtn.innerHTML = name;
   btnContainer.appendChild(holidayBtn);
 }
 
 createHolidaysButton('Feriados');
+
+//Exercicio 3
+holidayBtn.addEventListener('click', changeHolidayColor);
+
+function changeHolidayColor() {
+  let holidays = document.querySelectorAll('.holiday');
+  for (let holiday of holidays) {
+    if (holiday.style.background === '') {
+      holiday.style.background = 'pink';
+    } else {
+      holiday.style.background = '';
+    }
+  } 
+}
