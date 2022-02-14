@@ -63,3 +63,15 @@ function changeHolidayColor() {
     }
   } 
 }
+
+//Exercicio 4
+let fridayBtn = document.createElement('button');
+
+function createFridaysButton(name) {
+  let btnContainer = document.querySelector('.buttons-container');
+  fridayBtn.id = 'btn-friday';
+  fridayBtn.innerHTML = name;
+  btnContainer.appendChild(fridayBtn);
+}
+
+createFridaysButton('Sexta-feira');
