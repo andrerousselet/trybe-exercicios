@@ -123,3 +123,14 @@ console.log(indiceDeMenorValor([2, 4, 6, 7, 10, 0, -3]));
 
 
 //Exercicio 4
+function maiorPalavra(array) {
+  let newArray = [];
+  for (let nome of array) {
+    newArray.push(nome.length);
+  }
+  let indice = newArray.indexOf(Math.max(...newArray));
+  let maiorPalavra = array[indice];
+  return maiorPalavra;
+}
+
+console.log(maiorPalavra(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
