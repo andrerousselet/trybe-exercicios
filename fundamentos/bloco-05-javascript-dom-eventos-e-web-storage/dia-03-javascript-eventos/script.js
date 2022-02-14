@@ -28,6 +28,9 @@ function createDaysOfTheMonth() {
     if (days === 24 || days === 25 || days === 31) {
       dayListItem.classList.add('holiday');
     }
+    if (days === 4 || days === 11 || days === 18 || days === 25) {
+      dayListItem.classList.add('friday');
+    }
     
     monthDaysList.appendChild(dayListItem);
   };
