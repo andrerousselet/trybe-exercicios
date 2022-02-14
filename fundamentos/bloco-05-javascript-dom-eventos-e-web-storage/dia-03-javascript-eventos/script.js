@@ -24,6 +24,10 @@ function createDaysOfTheMonth() {
     const dayListItem = document.createElement('li');
     dayListItem.innerHTML = days;
     dayListItem.className = 'day';
+
+    if (days === 24 || days === 25 || days === 31) {
+      dayListItem.classList.add('holiday');
+    }
     
     monthDaysList.appendChild(dayListItem);
   };
