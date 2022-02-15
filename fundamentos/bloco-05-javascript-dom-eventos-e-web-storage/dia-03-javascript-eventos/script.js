@@ -75,3 +75,13 @@ function createFridaysButton(name) {
 }
 
 createFridaysButton('Sexta-feira');
+
+//Exercicio 5
+fridayBtn.addEventListener('click', changeFridaysText);
+
+function changeFridaysText() {
+  let fridays = document.querySelectorAll('.friday');
+  for (let friday of fridays) {
+    friday.innerHTML = 'Sexta-feira';
+  } 
+}
