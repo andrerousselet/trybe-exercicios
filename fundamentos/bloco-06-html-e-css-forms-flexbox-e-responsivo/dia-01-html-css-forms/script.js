@@ -1,3 +1,7 @@
+const submitButton = document.getElementById('btn-submit');
+const clearButton = document.getElementById('btn-clear');
+const auth = document.getElementById('auth');
+
 function submit(event) {
   event.preventDefault();
 }
@@ -13,9 +17,12 @@ function clear() {
   textArea.value = '';
 }
 
+function enableSubmit() {
+  submitButton.disabled = !auth.checked;
+}
+
 window.onload = function () {
-  const submitButton = document.getElementById('btn-submit');
-  const clearButton = document.getElementById('btn-clear');
   submitButton.addEventListener('click', submit);
   clearButton.addEventListener('click', clear);
+  auth.addEventListener('change', enableSubmit);
 }
