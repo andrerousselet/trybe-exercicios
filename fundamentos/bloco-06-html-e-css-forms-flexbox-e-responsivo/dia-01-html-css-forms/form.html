@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicios - 6.1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="header-content" id="main-header">
+    <h1 id="main-title">Formulário - TrybeTrip</h1>
+  </header>
+  <main class="main-content">
+    <form action="" method="get">
+      <div class="div-content">
+        <label for="username">Nome:</label>
+        <input type="text" name="name" id="username" class="input-text" required>
+      </div>
+      <div class="div-content">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" class="input-text" required>
+      </div>
+      <div class="div-content">
+        <p>Destino preferido:</p>
+        <input type="radio" name="destinos" id="destino-1" class="input-radio">
+        <label for="destino-1">Cidade</label>
+        <input type="radio" name="destinos" id="destino-2" class="input-radio">
+        <label for="destino-2">Campo</label>
+        <input type="radio" name="destinos" id="destino-3" class="input-radio">
+        <label for="destino-3">Praia</label>
+        <input type="radio" name="destinos" id="destino-4" class="input-radio">
+        <label for="destino-4">Montanhas</label>
+      </div>
+      <!--https://www.w3schools.com/tags/att_textarea_maxlength.asp-->
+      <div class="div-content">
+        <label for="porque">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</label>
+        <textarea name="porque" id="porque" cols="30" rows="10" maxlength="500"
+          placeholder="Digite sua resposta aqui..."></textarea>
+      </div>
+      <div class="div-content">
+        <label for="input-date">Melhor data para a viagem:</label>
+        <input type="date" id="input-date">
+      </div>
+      <div class="div-content">
+        <label for="mkt">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+        <input type="checkbox" id="mkt">
+      </div>
+      <div class="div-content">
+        <label for="auth">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos
+          futuros.</label>
+        <input type="checkbox" id="auth">
+      </div>
+      <div class="div-content" id="btn-container">
+        <button type="submit" id="btn-submit" disabled>Enviar</button>
+        <button type="button" id="btn-clear">Limpar</button>
+      </div>
+    </form>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
+
+<!-- 
+name=Andre+Boehme+Rousselet & 
+email=andre098%40hotmail.com & 
+destinos=on & 
+porque=Pq+eu+sou+foda+e+ponto+final. 
+-->
