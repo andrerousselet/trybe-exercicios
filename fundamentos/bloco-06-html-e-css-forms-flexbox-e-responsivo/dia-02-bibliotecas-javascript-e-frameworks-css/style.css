@@ -1,0 +1,90 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: seashell;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+  font-size: 15px;
+}
+
+.header-content {
+  background-color: antiquewhite;
+  border-radius: 10px;
+  width: 80%;
+  margin: 30px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.main-content {
+  background-color: antiquewhite;
+  border-radius: 10px;
+  width: 80%;
+  margin: 0px auto 30px;
+  padding: 20px;
+}
+
+.div-content {
+  width: 80%;
+  margin: 20px auto;
+  padding: 5px;
+}
+
+.input-text, textarea {
+  width: 50%;
+  border-radius: 5px;
+  border: 1px solid rgb(218, 205, 188);
+}
+
+.div-content p {
+  margin-bottom: 10px;
+}
+
+textarea {
+  margin-top: 10px;
+  width: 100%;
+  resize: none;
+}
+
+#input-date {
+  border-radius: 5px;
+  border: 1px solid rgb(218, 205, 188);
+}
+
+#btn-container {
+  text-align: center;
+}
+
+button {
+  width: 10%;
+  display: inline-block;
+  border: 1px solid rgb(218, 205, 188);
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgb(255, 249, 242);
+  color: gray;
+  padding: 10px;
+} */
+
+.container {
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 5px;
+}
+
+#input-date {
+  width: 195px;
+}
+
+#btn-container {
+  margin-top: 40px;
+}
+
+.check-container {
+  padding-left: 36px;
+}
