@@ -1,5 +1,8 @@
-const button = document.getElementById('btn');
-
-button.addEventListener('click', function (event) {
+function submit(event) {
   event.preventDefault();
-})
+}
+
+window.onload = function () {
+  const button = document.getElementById('btn');
+  button.addEventListener('click', submit);
+}
