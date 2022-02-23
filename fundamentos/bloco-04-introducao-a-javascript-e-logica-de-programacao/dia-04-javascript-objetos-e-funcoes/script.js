@@ -155,3 +155,12 @@ function numeroDeMaiorRepeticao(array) {
   return numeroMaisRepetido;
 }
 console.log(numeroDeMaiorRepeticao([8, 8, 2, 2, 2, 3, 2, 3, 3, 3, 2, 8, 8, 8, 8, 8, 8]));
+
+//Exercicio 6
+function somatorio(n) {
+  let resultado = 0;
+  for (let index = 1; index <= n; index += 1)
+  resultado += index;
+  return resultado;
+}
+console.log(somatorio(5));
