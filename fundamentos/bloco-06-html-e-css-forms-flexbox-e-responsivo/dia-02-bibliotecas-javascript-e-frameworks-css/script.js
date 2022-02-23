@@ -2,6 +2,10 @@ const submitButton = document.getElementById('btn-submit');
 const clearButton = document.getElementById('btn-clear');
 const auth = document.getElementById('auth');
 
+function enableSubmit() {
+  submitButton.disabled = !auth.checked;
+}
+
 function textInputValidation() {
   const email = document.querySelector('#email').value.length;
   const invalidEmail = email < 10 || email > 50;
@@ -38,12 +42,8 @@ function clear() {
   textArea.value = '';
 }
 
-function enableSubmit() {
-  submitButton.disabled = !auth.checked;
-}
-
 window.onload = function () {
-  submitButton.addEventListener('click', submit);
-  clearButton.addEventListener('click', clear);
   auth.addEventListener('change', enableSubmit);
+  // submitButton.addEventListener('click', submit);
+  // clearButton.addEventListener('click', clear);
 }
