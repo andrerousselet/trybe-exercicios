@@ -163,4 +163,18 @@ function somatorio(n) {
   resultado += index;
   return resultado;
 }
-console.log(somatorio(5));
+console.log(somatorio(6));
+
+//Exercicio 7
+function verificaFimPalavra(palavra, final) {
+  palavra = palavra.split('');
+  final = final.split('');
+  resultado = true;
+  for (let index = 0; index < final.length; index += 1) {
+    if (palavra[palavra.length - final.length + index] !== final[index]) {
+      resultado = false;
+    }
+  }
+  return resultado;
+}
+console.log(verificaFimPalavra('vasco', 'sco'));
