@@ -136,13 +136,22 @@ function maiorPalavra(array) {
 console.log(maiorPalavra(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
 
 //Exercicio 5
-function numeroDeMarioRepeticao(array) {
+function numeroDeMaiorRepeticao(array) {
+  let contador = 0;
+  let contRep = 0;
+  let numeroMaisRepetido = 0;
   for (let numero of array) {
-    let contador = 0;
     for (let numero2 of array) {
       if (numero === numero2) {
         contador += 1;
       }
     }
+    if (contador > contRep) {
+      contRep = contador;
+      numeroMaisRepetido = numero;
+    }
+    contador = 0;
   }
+  return numeroMaisRepetido;
 }
+console.log(numeroDeMaiorRepeticao([8, 8, 2, 2, 2, 3, 2, 3, 3, 3, 2, 8, 8, 8, 8, 8, 8]));
