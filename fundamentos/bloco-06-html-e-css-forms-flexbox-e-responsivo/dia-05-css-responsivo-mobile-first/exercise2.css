@@ -23,7 +23,7 @@ nav ul {
   padding: 0;
 }
 
-section {
+.asides {
   display: flex;
   flex-direction: column;
 }
@@ -38,6 +38,7 @@ section {
 }
 
 .aside-one ul, .aside-two ul {
+  list-style: none;
   display: flex;
   flex-flow: column;
   align-items: flex-start;
@@ -71,7 +72,6 @@ section {
 
   .aside-one ul, .aside-two ul {
     align-items: center;
-    list-style: none;
     padding-left: 0;
     text-align: center;
   }
@@ -126,7 +126,6 @@ section {
   }
 
   .aside-one ul, .aside-two ul {
-    list-style: none;
     padding-left: 0;
   }
   .aside-one h2 {
@@ -164,6 +163,69 @@ section {
   .main-content p {
     font-size: 23px;
     line-height: 30px;
+  }
+
+}
+
+@media screen and (min-width: 901px) {
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 5%;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: row wrap;
+    max-width: 90%;
+    margin: auto;
+  }
+
+  header p {
+    font-size: xx-large;
+  }
+
+  header nav ul {
+    display: flex;
+  }
+
+  header nav ul li {
+    margin: 0 20px;
+  }
+
+  .asides {
+    display: flex;
+    order: 1;
+    height: 20%;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 70%
+  }
+
+  .main-content p {
+    font-size: 20px;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    max-width: 64%;
+    margin: 5%;
+  }
+
+  footer h3 {
+    margin: 7px 0;
+    font-size: 15px;
+  }
+
+  footer p {
+    margin: 7px 0;
+    font-size: 15px;
   }
 
 }
