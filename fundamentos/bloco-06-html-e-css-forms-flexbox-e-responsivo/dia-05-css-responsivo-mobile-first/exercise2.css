@@ -8,6 +8,12 @@ html {
 
 .container {
   display: flex;
+  flex-direction: column;
+}
+
+header p {
+  font-weight: 900;
+  text-align: center;
 }
 
 nav ul {
@@ -17,8 +23,17 @@ nav ul {
   padding: 0;
 }
 
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+.aside-one {
+  order: 1;
+}
+
 .aside-one h2, .aside-two h2 {
-  font-size: 21px;
+  font-size: 22px;
   text-align: center;
 }
 
@@ -39,40 +54,42 @@ nav ul {
   text-align: center;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 650px) {
 
   .container {
-    flex-direction: column;
     max-width: 90%; 
     margin: 0 auto;
   }
 
   header p {
     font-size: 25px;
-    font-weight: 900;
-    text-align: center;
   }
 
   nav {
     display: none;
   }
 
-  .aside-one h2 {
-    font-size: 22px;
-  }
-
   .aside-one ul, .aside-two ul {
-    display: flex;
-    flex-flow: column;
     align-items: center;
     list-style: none;
     padding-left: 0;
-    font-size: 18px;
     text-align: center;
   }
 
+  .aside-two h2 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .aside-two ul {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
   .main-content h1 {
-    margin-top: 15%;
+    margin-top: 10%;
     font-size: 23px;
   }
 
@@ -89,6 +106,64 @@ nav ul {
   footer p {
     font-size: 15px;
     text-align: justify;
+  }
+
+}
+
+@media screen and (min-width: 651px) and (max-width: 900px) {
+
+  .container {
+    max-width: 92%;
+    margin: 0 auto;
+  }
+
+  header p {
+    font-size: 27px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .aside-one ul, .aside-two ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .aside-one h2 {
+    font-size: 27px;
+  }
+
+  .aside-one ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+    height: 200px;
+    font-size: 120%;
+    flex-shrink: 1;
+    line-height: 30px;
+  }
+
+  .aside-two h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .aside-two ul {
+    align-items: center;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .main-content h1 {
+    margin-top: 8%;
+    font-size: 28px;
+  }
+
+  .main-content p {
+    font-size: 23px;
+    line-height: 30px;
   }
 
 }
