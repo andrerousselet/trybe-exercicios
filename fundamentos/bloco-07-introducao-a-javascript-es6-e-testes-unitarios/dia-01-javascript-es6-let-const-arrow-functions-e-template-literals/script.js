@@ -21,3 +21,21 @@ const oddsAndEvens = [13, 3, 4, 10, 7, 2];
 const ordemCrescente = numbers => numbers.sort((a, b) => a - b);
 
 console.log(`Os números ${ordemCrescente(oddsAndEvens)} se encontram ordenados de forma crescente!`); // será necessário alterar essa linha 😉
+
+
+//Parte II
+//Exercicio 1
+const fatorial = (n) => {
+  if (n === 0 || n < 0) {
+    return 1
+  }
+  if (n > 0) {
+    let produto = 1;
+    for (let i = 2; i <= n; i += 1) {
+      produto *= i;
+    }
+    return produto
+  }
+}
+
+console.log(fatorial(-5));
