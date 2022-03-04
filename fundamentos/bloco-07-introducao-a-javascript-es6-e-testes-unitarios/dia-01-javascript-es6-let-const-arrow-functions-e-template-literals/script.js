@@ -68,3 +68,16 @@ console.log(longestWord(text));
 * console.log(longestWord("Antonio foi no banheiro e não sabemos o que aconteceu"));
 */
 
+//Exercicio 4
+const array = [`Git`, `HTML`, `CSS`, `JavaScript`, `Planilhas`];
+function buildPhrase(name) {
+  const str = 
+  `Tryber ${name} aqui! Tudo bem?
+  Minhas 5 principais habilidades são:`
+  array.forEach((skill) => {
+  `- ${skill}`
+  });
+  return `${str} ${array}`;
+}
+
+console.log(buildPhrase(`Andre`));
