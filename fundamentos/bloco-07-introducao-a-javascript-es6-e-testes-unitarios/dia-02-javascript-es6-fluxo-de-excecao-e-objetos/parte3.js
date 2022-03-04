@@ -19,12 +19,23 @@ const lesson3 = {
 };
 
 // //Exercicio 1
-// const function1 = (obj, key, value) => {
-//   obj.key = value;
-//   return obj;
-// }
-// console.log(function1(lesson2, 'turno', 'noite'));
+const function1 = (obj, key, value) => {
+  obj[key] = value;
+  return obj;
+}
+console.log(function1(lesson2, 'turno', 'noite'));
+
+console.log(`
+`);
 
 //Exercicio 2
 const function2 = (obj) => Object.keys(obj).forEach((key) => console.log(`- ${key}`));
 function2(lesson3);
+
+console.log(`
+`);
+
+//Exercicio 3
+const function3 = (obj) => console.log(Object.keys(obj).length);
+function3(lesson1);
+
