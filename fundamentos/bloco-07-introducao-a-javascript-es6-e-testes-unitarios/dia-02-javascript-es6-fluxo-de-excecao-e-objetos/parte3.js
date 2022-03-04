@@ -42,5 +42,5 @@ function3(lesson1);
 console.log(`
 `);
 
-const function4 = (obj) => Object.keys(obj).forEach((key) => console.log(`${obj[key]}`));
+const function4 = (obj) => Object.values(obj).forEach((value) => console.log(`${value}`));
 function4(lesson3);
