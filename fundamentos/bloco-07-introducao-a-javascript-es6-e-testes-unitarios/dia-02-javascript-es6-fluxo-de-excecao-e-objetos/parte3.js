@@ -52,3 +52,12 @@ console.log(allLessons);
 console.log(`---`);
 
 //Exercicio 6
+const function6 = () => {
+  let sum = 0;
+  Object.values(allLessons).forEach(prop => {
+    sum += prop.numeroEstudantes;
+  });
+  return sum;
+}
+
+console.log(function6());
