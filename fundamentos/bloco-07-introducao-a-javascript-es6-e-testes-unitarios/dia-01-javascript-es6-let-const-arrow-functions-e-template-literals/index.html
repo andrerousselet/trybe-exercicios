@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button id="btn">BUTTON</button>
+  <p id="clicks" style="border: 1px solid; width: 69px; text-align: center;">0</p>
+
+  <script>
+    const btn = document.getElementById('btn');
+    const qty = document.getElementById('clicks');
+    let clickCount = 1;
+    const count = () => qty.innerText = clickCount++;
+    window.onload = () => {
+      btn.addEventListener('click', count);
+    }
+  </script>
+
+</body>
+
+</html>
