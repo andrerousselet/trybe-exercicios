@@ -12,6 +12,7 @@ const newEmployees = (func) => {
 
 console.log(newEmployees(generateEmployee));
 
+
 //Exercicio 2
 const check = (myNumber, number) => myNumber === number;
 
@@ -24,3 +25,29 @@ const lottery = (myNumber, func) => {
 }
 
 console.log(lottery(4, check));
+
+
+//Exercicio 3
+const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
+const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+
+const checkAnswers = (student, template) => {
+  if (student === template) {
+    return 1;
+  }
+  if (student === 'N.A') {
+    return 0;
+  }
+  return -0.5;
+}
+
+const finalGrade = (studentAnswers, rightAnswers, callback) => {
+  let grade = 0;
+  for (let i = 0; i < studentAnswers.length; i += 1) {
+    const points = callback(studentAnswers[i], rightAnswers[i]);
+    grade += points;
+  }
+  return grade;
+}
+
+console.log(finalGrade(STUDENT_ANSWERS, RIGHT_ANSWERS, checkAnswers));
