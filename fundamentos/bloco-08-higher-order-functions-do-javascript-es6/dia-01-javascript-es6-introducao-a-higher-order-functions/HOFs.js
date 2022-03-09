@@ -12,4 +12,15 @@ const newEmployees = (func) => {
 
 console.log(newEmployees(generateEmployee));
 
-//
+//Exercicio 2
+const check = (myNumber, number) => myNumber === number;
+
+const lottery = (myNumber, func) => {
+  const number = Math.floor((Math.random() * 5) + 1);
+  if (func(myNumber, number)) {
+    return 'Ah muleeeeke! Acertou!!'
+  }
+  return 'Errou rude...'
+}
+
+console.log(lottery(4, check));
