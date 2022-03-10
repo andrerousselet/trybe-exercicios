@@ -33,8 +33,17 @@ const estudantes = [
 
 // 1 - Aqui na Trybe estamos criando um bot que vai dar os parabéns para as pessoas que entregaram 100% dos projetos, esse bot deve imprimir uma msg do tipo: "Olá pessoa, parabéns por ter finalizado 100% do nomeDoPorjeto", para cada pessoa.
 
-// escreva sua função aqui.
+// const parabens = (array) => {
+  estudantes.forEach((elemento) => {
+    elemento.status === 100 ? 
+    console.log(`Olá ${elemento.nome}, parabéns por ter finalizado 100% do ${elemento.Projeto}`) 
+    : console.log(`Olá ${elemento.nome}, com esforço você chega nos 100%!`);
+  });
+// };
 
 // 2 - Depois de algumas ações focadas nas pessoas que ainda não tinham entregue o projeto conseguimos ter 100% de aprovação! As pessoas que ainda não tinham entregue conseguiram os 80% e precisamos atualizar nossos dados e imprimir o novo resultado.
 
-// escreva sua função aqui.
+estudantes.forEach((elemento) => {
+  if (elemento.status < 80) elemento.status = 80;
+})
+console.table(estudantes)
