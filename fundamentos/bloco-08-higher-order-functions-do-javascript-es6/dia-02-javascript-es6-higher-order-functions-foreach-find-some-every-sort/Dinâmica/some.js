@@ -7,7 +7,11 @@
 const arrayIdades = [23, 32, 17, 16, 34];
 const arrayIdades2 = [23, 32, 27, 46, 34];
 
-// escreva sua função aqui.
+const anuncio = (array) => {
+  const anuncioCerto = array.some((elemento) => elemento < 18);
+  return anuncioCerto ? 'ChocoTrybe, melhor que console.log!' : 'Beba Trybeer, suave como um log de erro vazio!';
+}
+console.log(anuncio(arrayIdades2));
 
 // 2 - Aqui na trybe estamos planejando um bot que vai nos ajudar a planejar as mentorias e o primeiro passo é ver se teremos uma mentoria de projetos passados, pra isso precisamos checar os dados das pessoas estudantes e verificar se tem alguem que ainda não terminou o projeto, caso tenha, o bot deve nos imprimir a msg "Bora pra mentoria de projetos!" ou "Pode abrir o suco de laranja que temos 100% de aprovação!".
 
@@ -44,4 +48,8 @@ const estudantes = [
   },
 ];
 
-// escreva sua função aqui.
+estudantes.some((elemento) => {
+  if (elemento.status < 80) {
+    console.log('Bora pra mentoria de projetos!');
+  }
+});
