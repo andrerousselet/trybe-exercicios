@@ -62,9 +62,10 @@ const books = [
 ];
 
 function smallerName() {
-  let nameBook;
-  // escreva aqui o seu código
-
-  // Variável nameBook que receberá o valor do menor nome;
+  let nameBook = books[0].name;
+  books.forEach((book) => {
+    if (book.name.length < nameBook.length) nameBook = element.name;
+  });
   return nameBook;
 }
+console.log((smallerName(books)));
