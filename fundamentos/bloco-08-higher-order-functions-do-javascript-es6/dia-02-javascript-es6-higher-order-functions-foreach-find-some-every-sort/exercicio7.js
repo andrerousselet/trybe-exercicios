@@ -64,5 +64,15 @@ const books = [
 const expectedResult = false;
 
 function authorUnique() {
-  // escreva seu código aqui
+  let compare = 0;
+  let result = true;
+  books.forEach((book) => {
+    if (compare !== book.author.birthYear) {
+      compare = book.author.birthYear;
+    } else {
+      result = false;
+    }
+  });
+  return result;
 }
+console.log(authorUnique());
