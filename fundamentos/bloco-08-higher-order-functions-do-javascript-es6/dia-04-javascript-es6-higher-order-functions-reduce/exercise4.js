@@ -78,3 +78,8 @@ function longestNamedBook(arr) {
   return arr.find((element) => element.name.length === longestName);
 }
 console.log(longestNamedBook(books));
+
+// function longestNamedBook(arr) {
+//   return arr.reduce((longest, book) => (book.name.length > longest.name.length) ? book : longest);
+// }
+// console.log(longestNamedBook(books));
