@@ -89,3 +89,16 @@ function changeFridaysText() {
   }
 }
 fridayBtn.addEventListener('click', changeFridaysText);
+
+//Exercicio 6
+const days = document.querySelectorAll('.day');
+function zoomIn(event) {
+  event.target.style.fontSize = 'xx-large';
+}
+function zoomOut(event) {
+  event.target.style.fontSize = '20px';
+}
+for (let day of days) {
+  day.addEventListener('mouseover', zoomIn);
+  day.addEventListener('mouseout', zoomOut);
+}
