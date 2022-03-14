@@ -84,3 +84,20 @@ const function8 = (obj, key, value) => {
   return result;
 }
 console.log(function8(lesson3, 'professor', 'Maria Clara'));
+
+console.log(`-B.1-`);
+//Bônus
+// B.1
+const function9 = (obj, key) => {
+  const array = Object.values(obj);
+  let sum = 0;
+  for (let item in array) {
+    if (array[item].materia === key) sum += array[item].numeroEstudantes;
+  }
+  return sum;
+}
+console.log(function9(allLessons, 'Matemática'));
+
+console.log(`-B.2-`);
+
+// B.2
