@@ -103,10 +103,19 @@ for (let day of days) {
 }
 
 //Exercicio 7
+const myTasks = document.querySelector('.my-tasks');
 const addTask = (task) => {
-  const myTasks = document.querySelector('.my-tasks');
   const newTask = document.createElement('span');
   myTasks.appendChild(newTask);
   newTask.innerText = task;
 }
 addTask('Projeto: ')
+
+//Exercicio 8
+const addColorLabel = (color) => {
+  const newLabel = document.createElement('div');
+  myTasks.appendChild(newLabel);
+  newLabel.style.backgroundColor = color;
+}
+addColorLabel('green')
+
