@@ -92,7 +92,7 @@ fridayBtn.addEventListener('click', changeFridaysText);
 //Exercicio 6
 const days = document.querySelectorAll('.day');
 function zoomIn(event) {
-  event.target.style.fontSize = 'xx-large';
+  event.target.style.fontSize = '28px';
 }
 function zoomOut(event) {
   event.target.style.fontSize = '20px';
@@ -129,3 +129,40 @@ newLabel.addEventListener('click', (event) => {
     event.target.className = 'task';
   }
 })
+
+//Exercicio 10
+const colorDay = () => {
+  const calendarDays = document.getElementsByClassName('day');
+  const label = document.querySelector('.task');
+  const labelColor = label.style.backgroundColor;
+  for (let day of calendarDays) {
+    day.addEventListener('click', (event) => {
+      if (label.classList.contains('selected') && event.target.style.color !== labelColor) {
+        event.target.style.color = labelColor;
+      } else {
+        event.target.style.color = 'rgb(119,119,119)';
+      }
+      
+    })
+  }
+}
+colorDay();
+
+// function setDayColor() {
+//   let selectedTask = document.getElementsByClassName('task selected');
+//   let days = document.querySelector('#days');
+//   let taskDiv = document.querySelector('.task');
+//   let taskColor = taskDiv.style.backgroundColor;
+  
+//   days.addEventListener('click', function(event){
+//     let eventTargetColor = event.target.style.color;
+//     if (selectedTask.length > 0 && eventTargetColor !== taskColor) {
+//       let color = selectedTask[0].style.backgroundColor;
+//       event.target.style.color = color;
+//     } else if (eventTargetColor === taskColor && selectedTask.length !== 0) {
+//       event.target.style.color = 'rgb(119,119,119)';
+//     }
+//   });
+// };
+
+// setDayColor();
