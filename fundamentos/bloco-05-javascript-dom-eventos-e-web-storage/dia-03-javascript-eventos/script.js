@@ -73,7 +73,6 @@ function createFridaysButton(name) {
   fridayBtn.innerHTML = name;
   btnContainer.appendChild(fridayBtn);
 }
-
 createFridaysButton('Sexta-feira');
 
 //Exercicio 5
@@ -102,3 +101,12 @@ for (let day of days) {
   day.addEventListener('mouseover', zoomIn);
   day.addEventListener('mouseout', zoomOut);
 }
+
+//Exercicio 7
+const addTask = (task) => {
+  const myTasks = document.querySelector('.my-tasks');
+  const newTask = document.createElement('span');
+  myTasks.appendChild(newTask);
+  newTask.innerText = task;
+}
+addTask('Projeto: ')
