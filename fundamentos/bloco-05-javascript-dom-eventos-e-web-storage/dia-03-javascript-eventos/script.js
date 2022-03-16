@@ -116,6 +116,16 @@ const addColorLabel = (color) => {
   const newLabel = document.createElement('div');
   myTasks.appendChild(newLabel);
   newLabel.style.backgroundColor = color;
+  newLabel.classList.add('task')
 }
 addColorLabel('green')
 
+//Exercicio 9
+const newLabel = document.querySelector('.task');
+newLabel.addEventListener('click', (event) => {
+  if (event.target.className === 'task') {
+    event.target.classList.add('selected');
+  } else {
+    event.target.className = 'task';
+  }
+})
