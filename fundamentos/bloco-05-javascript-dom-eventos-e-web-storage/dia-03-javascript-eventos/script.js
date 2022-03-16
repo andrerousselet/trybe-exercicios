@@ -139,30 +139,30 @@ const colorDay = () => {
     day.addEventListener('click', (event) => {
       if (label.classList.contains('selected') && event.target.style.color !== labelColor) {
         event.target.style.color = labelColor;
-      } else {
+      } else if (label.classList.contains('selected')) {
         event.target.style.color = 'rgb(119,119,119)';
       }
-      
     })
   }
 }
 colorDay();
 
-// function setDayColor() {
-//   let selectedTask = document.getElementsByClassName('task selected');
-//   let days = document.querySelector('#days');
-//   let taskDiv = document.querySelector('.task');
-//   let taskColor = taskDiv.style.backgroundColor;
-  
-//   days.addEventListener('click', function(event){
-//     let eventTargetColor = event.target.style.color;
-//     if (selectedTask.length > 0 && eventTargetColor !== taskColor) {
-//       let color = selectedTask[0].style.backgroundColor;
-//       event.target.style.color = color;
-//     } else if (eventTargetColor === taskColor && selectedTask.length !== 0) {
-//       event.target.style.color = 'rgb(119,119,119)';
-//     }
-//   });
-// };
+//Bônus
+const addBtn = document.getElementById('btn-add');
+const input = document.getElementById('task-input');
+const taskList = document.querySelector('.task-list');
 
-// setDayColor();
+const addTaskInList = () => {
+  const task = document.createElement('li');
+  if (input.value === '') alert('Escreva algum compromisso para inserir na lista!')
+  taskList.appendChild(task);
+  task.innerHTML = input.value;
+}
+addBtn.addEventListener('click', addTaskInList)
+
+input.addEventListener('keyup', (event) => {
+  const task = document.createElement('li');
+  if (event.key === 'Enter' && input.value.length > 0)
+  taskList.appendChild(task);
+  task.innerHTML = input.value;
+})
