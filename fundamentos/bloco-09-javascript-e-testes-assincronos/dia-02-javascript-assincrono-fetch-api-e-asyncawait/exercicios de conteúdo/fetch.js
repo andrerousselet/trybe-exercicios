@@ -44,6 +44,7 @@
 
 
 // Usando try / catch
+const { log } = require('console');
 const fetch = require('node-fetch');
 
 const fetchJoke = async () => {
