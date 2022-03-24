@@ -28,7 +28,7 @@ O programa conta com mais de 1.500 horas de aulas online ao vivo, aborda introdu
 - [x] 2: _HTML & CSS - Primeiros passos em CSS_
 - [x] 3: _HTML & CSS - Seletores e posicionamento_
 - [x] 4: _HTML Semântico_
-- [x] 5: _[Projeto - Lessons Learned](www.google.com.br)_
+- [x] 5: _[Projeto - Lessons Learned](https://github.com/tryber/sd-020-b-project-lessons-learned/pull/55)_
 
 #### Bloco 4: Introdução à JavaScript e Lógica de Programação
 
@@ -37,7 +37,7 @@ O programa conta com mais de 1.500 horas de aulas online ao vivo, aborda introdu
 - [x] 2: _JavaScript - Array e loop For_
 - [x] 3: _JavaScript - Lógica de Programação e Algoritmos_
 - [x] 4: _JavaScript - Objetos e funções_
-- [x] 5: _[Projeto - Playground Functions]()_
+- [x] 5: _[Projeto - Playground Functions](https://github.com/tryber/sd-020-b-project-playground-functions/pull/38)_
 
 #### Bloco 5: JavaScript: DOM, Eventos e Web Storage
 
@@ -46,10 +46,10 @@ O programa conta com mais de 1.500 horas de aulas online ao vivo, aborda introdu
 - [x] 3: _JavaScript - Eventos_
 - [x] 4: _JavaScript - Web Storage_
 - [x] 5: _Fundamentos - JavaScript - Projetos_
-- [x] 5: _[Projeto - Arte com Pixels]()_
-- [x] 6: _[Projeto - Lista de tarefas]()_
+- [x] 5: _[Projeto - Arte com Pixels](https://github.com/tryber/sd-020-b-project-pixels-art/pull/63)_
+- [x] 6: _[Projeto - Lista de tarefas](https://github.com/tryber/sd-020-b-project-todo-list/pull/93)_
 - [ ] 7: _[Projeto - Meme Generator]()_
-- [x] 7: _[Projeto - Adivinhe a Cor]()_
+- [x] 7: _[Projeto - Adivinhe a Cor](https://github.com/tryber/sd-020-b-project-color-guess/pull/33)_
 - [ ] 7: _[Projeto - Carta Misteriosa]()_
 
 #### Bloco 6: HTML e CSS: Forms, Flexbox e Responsivo
@@ -60,14 +60,14 @@ O programa conta com mais de 1.500 horas de aulas online ao vivo, aborda introdu
 - [x] 3: _CSS Flexbox - Part 1_
 - [x] 4: _CSS Flexbox - Part 2_
 - [x] 5: _CSS Responsivo - Mobile First_
-- [x] 6: _[Projeto - Trybewarts]()_
+- [x] 6: _[Projeto - Trybewarts](https://github.com/tryber/sd-020-b-project-trybewarts/pull/164)_
 
 #### Bloco 7: Introdução à JavaScript ES6 e Testes Unitários
 
 - [x] 1: _JavaScript ES6 - let, const, arrow functions e template literals_
 - [x] 2: _JavaScript ES6 - Fluxo de exceção e Objetos_
 - [x] 3: _Primeiros passos em Jest_
-- [x] 4: _[Projeto - JavaScript Testes Unitários]()_
+- [x] 4: _[Projeto - JavaScript Testes Unitários](https://github.com/tryber/sd-020-b-project-js-unit-tests/pull/75)_
 
 #### Bloco 8: Higher Order Functions do JavaScript ES6
 
@@ -80,9 +80,9 @@ O programa conta com mais de 1.500 horas de aulas online ao vivo, aborda introdu
 
 #### Bloco 9: JavaScript e Testes Assíncronos
 
-- [ ] 1: _JavaScript Assíncrono e Callbacks_
-- [ ] 2: _JavaScript Assíncrono - Fetch API e async/await_
-- [ ] 3: _Jest - Testes Assíncronos_
+- [x] 1: _JavaScript Assíncrono e Callbacks_
+- [x] 2: _JavaScript Assíncrono - Fetch API e async/await_
+- [x] 3: _Jest - Testes Assíncronos_
 - [ ] 4: _[Projeto - Carrinho de Compras]()_
 
 ## Desenvolvimento Front-end :hourglass_flowing_sand:
