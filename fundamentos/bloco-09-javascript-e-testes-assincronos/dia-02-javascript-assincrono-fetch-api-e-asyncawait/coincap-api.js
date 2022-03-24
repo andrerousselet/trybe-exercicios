@@ -1,5 +1,3 @@
-const url = `https://api.coincap.io/v2/assets`;
-
 const append = (crypto) => {
   const ol = document.querySelector('#crypto-list');
   const li = document.createElement('li');
@@ -24,16 +22,16 @@ const formatArray = (data) => {
 }
 
 const fetchCrypto = async () => {
+  const url = `https://api.coincap.io/v2/assets`;
   try {
     const response = await fetch(url);
     const cryptoObj = await response.json();
     const arrayOfCryptos = cryptoObj.data;
     const formattedArrayOfCryptos = formatArray(arrayOfCryptos);
     formattedArrayOfCryptos.forEach((crypto) => append(crypto));
-    console.log(formattedArrayOfCryptos);
   } catch (error) {
     console.log(error);
   }
 }
 
-window.onload = fetchCrypto();
+window.onload = () => fetchCrypto();
