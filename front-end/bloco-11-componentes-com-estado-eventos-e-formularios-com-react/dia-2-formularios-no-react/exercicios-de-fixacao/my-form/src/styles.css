@@ -1,0 +1,23 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+label {
+  margin: 20px 0;
+}
+
+.textarea {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-favorite {
+  width: 150px;
+}
