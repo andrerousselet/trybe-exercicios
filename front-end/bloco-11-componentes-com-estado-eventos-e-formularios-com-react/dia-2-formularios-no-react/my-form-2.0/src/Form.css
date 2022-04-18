@@ -1,0 +1,16 @@
+.Form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1 {
+  text-align: center;
+}
+
+.form-labels {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
