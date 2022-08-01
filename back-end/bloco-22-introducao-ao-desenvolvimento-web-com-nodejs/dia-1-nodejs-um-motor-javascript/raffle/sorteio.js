@@ -14,7 +14,7 @@ function raffle() {
     ? console.log('Parabéns, número correto!')
     : console.log(`Opa, não foi dessa vez. O número era ${randomNum}`);
 
-  const playAgain = readline.question('\nQuer jogar novamente? Digite s para sim ou qualquer outra coisa para não.');
+  const playAgain = readline.question('\nQuer jogar novamente? Digite "s" e tecle "enter" para sim ou qualquer outra coisa para não.');
 
   return playAgain === 's' && raffle();
 }
