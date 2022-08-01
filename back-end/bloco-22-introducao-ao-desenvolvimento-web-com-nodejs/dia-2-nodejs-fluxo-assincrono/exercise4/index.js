@@ -36,4 +36,17 @@ async function removeSimpsonById(id) {
   }
 }
 
-removeSimpsonById(11);
+// removeSimpsonById(1);
+
+async function createSimpsonFamily() {
+  try {
+    const simpsonsJSON = await fs.readFile('./simpsons.json', 'utf-8');
+    const parsedSimpsons = JSON.parse(simpsonsJSON);
+    const simpsons = parsedSimpsons.filter((simpson) => Number(simpson.id) < 5);
+    await fs.writeFile('./simpsonFamily.json', JSON.stringify(simpsons));
+  } catch (e) {
+    console.error(e)
+  }
+}
+
+createSimpsonFamily();
