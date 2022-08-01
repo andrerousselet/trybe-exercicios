@@ -9,6 +9,15 @@ function numbers(a, b, c) {
   })
 }
 
-numbers(1, 4, 9)
+function randomNumbers() {
+  const ranNums = [];
+  for (let i = 0; i < 3; i += 1) {
+    let ranNum = Math.floor(Math.random() * 10 + 1);
+    ranNums.push(ranNum);
+  }
+  return ranNums;
+}
+
+numbers(...randomNumbers())
   .then((res) => console.log(res))
   .catch((err) => console.log(err));
