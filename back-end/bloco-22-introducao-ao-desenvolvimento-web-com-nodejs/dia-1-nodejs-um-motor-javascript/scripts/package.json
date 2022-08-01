@@ -1,10 +1,10 @@
 {
-  "name": "my-scripts",
+  "name": "scripts",
   "version": "1.0.0",
-  "description": "calculates IMC",
+  "description": "choose scripts to run",
   "main": "index.js",
   "scripts": {
-    "imc": "node imc.js",
+    "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
