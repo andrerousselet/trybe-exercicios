@@ -11,4 +11,16 @@ async function simpsons() {
   }
 }
 
-simpsons();
+// simpsons();
+
+async function findSimpsonById(id) {
+  const simpsonsJSON = await fs.readFile('./simpsons.json', 'utf-8');
+  const parsedSimpsons = JSON.parse(simpsonsJSON);
+  const simpson = parsedSimpsons.find((simpson) => Number(simpson.id) === id);
+  if (!simpson) throw new Error('id não encontrado');
+  return simpson;
+}
+
+findSimpsonById(0)
+  .then(response => console.log(response))
+  .catch(error => console.log(error.message));
