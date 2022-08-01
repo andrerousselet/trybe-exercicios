@@ -18,6 +18,13 @@ function randomNumbers() {
   return ranNums;
 }
 
-numbers(...randomNumbers())
-  .then((res) => console.log(res))
-  .catch((err) => console.log(err));
+async function checkNumbers() {
+  try {
+    const result = await numbers(...randomNumbers());
+    console.log(result);
+  } catch (e) {
+    console.log(e.message);
+  }
+}
+
+checkNumbers();
