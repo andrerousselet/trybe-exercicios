@@ -52,12 +52,12 @@ async function createSimpsonFamily() {
 // createSimpsonFamily();
 
 async function addCharToSimpsonFamily(id, char) {
-  if (!id || !char || typeof id !== 'string' || typeof char !== 'string') {
-    throw new Error('invalid parameters!')
-  }
   try {
     const simpsonsJSON = await fs.readFile('./simpsonFamily.json', 'utf-8');
     const parsedSimpsons = JSON.parse(simpsonsJSON);
+    if (!id || !char || typeof id !== 'string' || typeof char !== 'string') {
+      throw new Error('invalid parameters!')
+    }
     const simpsons = [...parsedSimpsons, { id, name: char }];
     await fs.writeFile('./simpsonFamily.json', JSON.stringify(simpsons));
   } catch (e) {
@@ -65,4 +65,18 @@ async function addCharToSimpsonFamily(id, char) {
   }
 }
 
-// addCharToSimpsonFamily('7', null);
+addCharToSimpsonFamily(8, 'Mary Poppins');
+
+// async function subCharToSimpsonFamily(oldChar, newChar) {
+//   try {
+//     const simpsonsJSON = await fs.readFile('./simpsonFamily.json', 'utf-8');
+//     const parsedSimpsons = JSON.parse(simpsonsJSON);
+//     if (!oldChar || !newChar || typeof newChar !== 'string' || typeof newChar !== 'string') {
+//       throw new Error('invalid names!')
+//     }
+//     const simpsons = [...parsedSimpsons, { id, name: char }];
+//     await fs.writeFile('./simpsonFamily.json', JSON.stringify(simpsons));
+//   } catch (e) {
+//     console.log(e.message)
+//   }
+// }
