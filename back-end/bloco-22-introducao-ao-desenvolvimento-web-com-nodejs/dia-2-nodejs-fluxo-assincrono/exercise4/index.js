@@ -49,4 +49,20 @@ async function createSimpsonFamily() {
   }
 }
 
-createSimpsonFamily();
+// createSimpsonFamily();
+
+async function addCharToSimpsonFamily(id, char) {
+  if (!id || !char || typeof id !== 'string' || typeof char !== 'string') {
+    throw new Error('invalid parameters!')
+  }
+  try {
+    const simpsonsJSON = await fs.readFile('./simpsonFamily.json', 'utf-8');
+    const parsedSimpsons = JSON.parse(simpsonsJSON);
+    const simpsons = [...parsedSimpsons, { id, name: char }];
+    await fs.writeFile('./simpsonFamily.json', JSON.stringify(simpsons));
+  } catch (e) {
+    console.log(e.message)
+  }
+}
+
+// addCharToSimpsonFamily('7', null);
