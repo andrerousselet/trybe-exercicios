@@ -65,18 +65,22 @@ async function addCharToSimpsonFamily(id, char) {
   }
 }
 
-addCharToSimpsonFamily(8, 'Mary Poppins');
+// addCharToSimpsonFamily(8, 'Mary Poppins');
 
-// async function subCharToSimpsonFamily(oldChar, newChar) {
-//   try {
-//     const simpsonsJSON = await fs.readFile('./simpsonFamily.json', 'utf-8');
-//     const parsedSimpsons = JSON.parse(simpsonsJSON);
-//     if (!oldChar || !newChar || typeof newChar !== 'string' || typeof newChar !== 'string') {
-//       throw new Error('invalid names!')
-//     }
-//     const simpsons = [...parsedSimpsons, { id, name: char }];
-//     await fs.writeFile('./simpsonFamily.json', JSON.stringify(simpsons));
-//   } catch (e) {
-//     console.log(e.message)
-//   }
-// }
+async function subCharToSimpsonFamily(oldChar, newChar) {
+  try {
+    if (!oldChar || !newChar || typeof newChar !== 'string' || typeof newChar !== 'string') {
+      throw new Error('invalid names!')
+    }
+    const simpsonsJSON = await fs.readFile('./simpsonFamily.json', 'utf-8');
+    const parsedSimpsons = JSON.parse(simpsonsJSON);
+    const oldCharId = parsedSimpsons.findIndex((char) => char.name === oldChar);
+    if (oldCharId === -1) throw new Error('family member not found!')
+    parsedSimpsons[oldCharId].name = newChar;
+    await fs.writeFile('./simpsonFamily.json', JSON.stringify(parsedSimpsons));
+  } catch (e) {
+    console.log(e.message)
+  }
+}
+
+subCharToSimpsonFamily('John Doe', 'Mr Burns');
