@@ -15,5 +15,9 @@ describe('A função myNumber()', () => {
       const result = myNumber(0);
       expect(result).to.be.equal('neutro');
     });
+    it('"o valor deve ser um número" quando o parâmetro não for um número', () => {
+      const result = myNumber('1');
+      expect(result).to.be.equal('o valor deve ser um número');
+    });
   });
 });
