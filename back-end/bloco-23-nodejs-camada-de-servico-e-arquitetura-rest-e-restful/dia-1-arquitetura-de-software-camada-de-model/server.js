@@ -11,7 +11,15 @@ app.get('/', (_req, res) => res.status(200).send('Funcionando perfeitamente!'))
 
 app.get('/users', async (_req, res) => {
   const users = await User.getAll()
+  if (!users.length) return res.status(200).json([])
   return res.status(200).json(users)
+})
+
+app.get('/users/:id', async (req, res) => {
+  const { id } = req.params
+  const user = await User.getById(id)
+  if (!user) return res.status(404).json({ message: 'Usuário não encontrado!' })
+  return res.status(200).json(user)
 })
 
 app.post('/users', isValid, async (req, res) => {

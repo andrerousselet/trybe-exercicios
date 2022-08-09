@@ -17,6 +17,14 @@ async function getAll () {
   return users.map(serialize)
 }
 
+async function getById (id) {
+  const [users] = await connection.execute(
+    `SELECT id, first_name, last_name, email, password FROM model_ex.users
+    WHERE id=?;`, [id]
+  )
+  return users.map(serialize)[0]
+}
+
 async function create (firstName, lastName, email, password) {
   await connection.execute(
     'INSERT INTO model_ex.users (first_name, last_name, email, password) VALUES (?, ?, ?, ?)',
@@ -24,4 +32,4 @@ async function create (firstName, lastName, email, password) {
   )
 }
 
-module.exports = { getAll, create }
+module.exports = { getAll, getById, create }
