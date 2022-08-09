@@ -1,5 +1,6 @@
 const express = require('express')
 const User = require('./models/User')
+const isValid = require('./middlewares/validate.user')
 
 const PORT = process.env.PORT || 3000
 
@@ -13,7 +14,7 @@ app.get('/users', async (_req, res) => {
   return res.status(200).json(users)
 })
 
-app.post('/users', async (req, res) => {
+app.post('/users', isValid, async (req, res) => {
   const { firstName, lastName, email, password } = req.body
   await User.create(firstName, lastName, email, password)
   return res.status(201).json({ message: 'Usuário criado com sucesso!' })
