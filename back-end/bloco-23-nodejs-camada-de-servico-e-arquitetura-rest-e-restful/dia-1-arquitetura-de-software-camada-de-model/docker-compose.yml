@@ -1,0 +1,14 @@
+services:
+  db:
+    image: mysql
+    restart: always
+    platform: linux/x86_64
+    container_name: bloco23-dia1
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: Hiziwa29
+    volumes:
+      - myapp:/var/lib/mysql
+volumes:
+  myapp:

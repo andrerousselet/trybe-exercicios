@@ -1,0 +1,27 @@
+{
+  "name": "dia-1-arquitetura-de-software-camada-de-model",
+  "version": "1.0.0",
+  "description": "Exercicios do Bloco 23",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Andre Rousselet",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mysql2": "^2.3.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.21.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.4",
+    "eslint-plugin-promise": "^6.0.0",
+    "nodemon": "^2.0.19"
+  }
+}
