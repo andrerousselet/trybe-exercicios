@@ -32,4 +32,13 @@ async function create (firstName, lastName, email, password) {
   )
 }
 
-module.exports = { getAll, getById, create }
+async function edit ({ id, firstName, lastName, email, password }) {
+  await connection.execute(
+    `UPDATE model_ex.users
+    SET first_name=?, last_name=?, email=?, password=?
+    WHERE id=?`,
+    [firstName, lastName, email, password, id]
+  )
+}
+
+module.exports = { getAll, getById, create, edit }
