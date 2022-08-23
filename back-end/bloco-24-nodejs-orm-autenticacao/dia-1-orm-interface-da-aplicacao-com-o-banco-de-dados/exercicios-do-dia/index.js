@@ -8,13 +8,16 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
-app.get('/books', BooksController.getAll)
-app.get('/books/:id', BooksController.getById)
+app.get('/books', BooksController.getAll);
+app.get('/books/:id', BooksController.getById);
 
-app.post('/books', BooksController.create)
+app.post('/books', BooksController.create);
+
+app.put('/books/:id', BooksController.update);
 
 app.use((err, req, res, next) => {
   console.log(err);
+  return res.status(500).json({message: 'Algo deu errado!'});
 })
 
 app.listen(PORT, () => console.log(`Ouvindo na porta ${PORT}!`));
