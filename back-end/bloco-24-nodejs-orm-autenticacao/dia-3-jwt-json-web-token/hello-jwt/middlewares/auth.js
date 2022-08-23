@@ -14,7 +14,7 @@ module.exports = (req, res, next) => {
     console.log(payload);
     req.user = payload;
     return next();
-  } catch (e) {
+  } catch (err) {
     err.statusCode = 401;
     return next(err);
   }
