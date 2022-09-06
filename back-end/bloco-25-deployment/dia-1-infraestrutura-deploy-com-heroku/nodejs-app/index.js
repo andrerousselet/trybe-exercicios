@@ -3,6 +3,9 @@ require('dotenv/config');
 
 const app = express();
 
-app.get('/', (_req, res) => res.status(200).send('Está vivo!!!'))
+const PORT = process.env.PORT || 3000;
+const ANY = process.env.ANY || 'QUALQUER COISA';
 
-app.listen(3000, () => console.log(`App rodando na porta 3000`))
+app.get('/', (_req, res) => res.status(200).send(ANY))
+
+app.listen(PORT, () => console.log(`App rodando na porta ${PORT}`))
