@@ -14,3 +14,15 @@ enum Months {
 }
 
 console.log(Months)
+
+// ---------------
+
+enum Seasons {
+  autumn = 'autumn',
+  winter = 'winter',
+  spring = 'spring',
+  summer = 'summer',
+}
+
+console.log(Seasons);
+
