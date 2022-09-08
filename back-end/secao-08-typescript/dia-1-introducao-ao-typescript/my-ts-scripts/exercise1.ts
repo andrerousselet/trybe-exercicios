@@ -26,7 +26,7 @@ const characters: Character[] = [
   },
 ]
 
-function printCharacter(character, index: number): void {
+function printCharacter(character: Character, index: number): void {
   const { nickname, class: cls, createdAt } = character;
 
   console.log(`\n\n===== Character: ${index + 1} ========`);
