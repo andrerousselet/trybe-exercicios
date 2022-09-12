@@ -63,3 +63,26 @@ class Car {
     console.log(`Vira o carro para a ${direction}`);
   }
 }
+
+const gol = new Car('Volkswagen', Colors.silver, 4);
+
+gol.openTheDoor(Doors.driver);
+gol.closeTheDoor(Doors.driver);
+gol.turnOn();
+gol.speedUp();
+gol.speedDown();
+gol.turn(Directions.left);
+gol.speedUp();
+gol.speedDown();
+gol.stop();
+gol.honk();
+gol.openTheDoor(Doors.passanger);
+gol.closeTheDoor(Doors.passanger);
+gol.speedUp();
+gol.speedDown();
+gol.stop();
+gol.turnOff();
+gol.openTheDoor(Doors.driver);
+gol.openTheDoor(Doors.passanger);
+gol.closeTheDoor(Doors.driver);
+gol.closeTheDoor(Doors.passanger);
