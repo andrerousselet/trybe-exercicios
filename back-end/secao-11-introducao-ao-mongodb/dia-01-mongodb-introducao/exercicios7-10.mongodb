@@ -1,0 +1,16 @@
+use('test2');
+
+//exercicio 7
+db.books.countDocuments();
+
+//exercicio 8
+db.books.countDocuments({ status: 'PUBLISH' });
+
+//exercicio 9
+db.books.find({}, { title: 1, isbn: 1, pageCount: 1, _id: 0 }).limit(3);
+
+//exercicio 10
+db.books.find(
+  { status: 'MEAP' },
+  { title: 1, authors: 1, status: 1 }
+).skip(5).limit(10);
