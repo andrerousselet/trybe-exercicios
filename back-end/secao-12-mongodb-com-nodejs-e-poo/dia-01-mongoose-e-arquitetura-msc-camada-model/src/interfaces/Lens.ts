@@ -10,3 +10,11 @@ type ILens = z.infer<typeof lensZodSchema>;
 
 export default ILens;
 export { lensZodSchema };
+
+// interface ILens {
+//   degree: number,
+//   antiGlare: boolean,
+//   blueLightFilter: boolean,
+// }
+
+// export default ILens;
