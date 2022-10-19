@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import sinon from 'sinon';
 import Lens from '../../../models/Lens';
 import { Model } from 'mongoose';
-import { lensMock, lensMockWithId } from '../../mocks/lensMock';
+import { lensMock, lensMockWithId, lensWithIdListMock } from '../../mocks/lensMock';
 
 describe('Lens Model', () => {
   const lensModel = new Lens();
@@ -10,6 +10,7 @@ describe('Lens Model', () => {
 	before(() => {
 		sinon.stub(Model, 'create').resolves(lensMockWithId);
 		sinon.stub(Model, 'findOne').resolves(lensMockWithId);
+		sinon.stub(Model, 'find').resolves(lensWithIdListMock);
 	});
 
 	after(() => {
@@ -18,15 +19,15 @@ describe('Lens Model', () => {
 
   describe('Creating a lens', () => {
     it('successfuly created', async () => {
-      const createdFrame = await lensModel.create(lensMock);
-      expect(createdFrame).to.deep.equal(lensMockWithId);
+      const createdLens = await lensModel.create(lensMock);
+      expect(createdLens).to.deep.equal(lensMockWithId);
     });
   });
 
   describe('Searching a lens', () => {
     it('successfuly found', async () => {
-      const foundFrame = await lensModel.readOne('62cf1fc6498565d94eba52cd');
-      expect(foundFrame).to.deep.equal(lensMockWithId);
+      const foundLens = await lensModel.readOne('62cf1fc6498565d94eba52cd');
+      expect(foundLens).to.deep.equal(lensMockWithId);
     });
 
     it('_id not found', async () => {
@@ -35,6 +36,13 @@ describe('Lens Model', () => {
       } catch (error: any) {
         expect(error.message).to.equal('InvalidMongoId')
       }
+    });
+  });
+
+  describe('Searching all lens', () => {
+    it('successfuly found', async () => {
+      const lensList = await lensModel.read();
+      expect(lensList).to.deep.equal(lensWithIdListMock);
     });
   });
 

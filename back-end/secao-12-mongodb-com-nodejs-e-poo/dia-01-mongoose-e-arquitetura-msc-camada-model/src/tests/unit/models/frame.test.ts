@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import sinon from 'sinon';
 import Frame from '../../../models/Frame';
 import { Model } from 'mongoose';
-import { frameMock, frameMockWithId } from '../../mocks/frameMock';
+import { frameMock, frameMockWithId, framesWithIdListMock } from '../../mocks/frameMock';
 
 describe('Frame Model', () => {
   const frameModel = new Frame();
@@ -10,6 +10,7 @@ describe('Frame Model', () => {
 	before(() => {
 		sinon.stub(Model, 'create').resolves(frameMockWithId);
 		sinon.stub(Model, 'findOne').resolves(frameMockWithId);
+		sinon.stub(Model, 'find').resolves(framesWithIdListMock);
 	});
 
 	after(() => {
@@ -35,6 +36,13 @@ describe('Frame Model', () => {
       } catch (error: any) {
         expect(error.message).to.equal('InvalidMongoId')
       }
+    });
+  });
+
+  describe('Searching all frames', () => {
+    it('successfuly found', async () => {
+      const framesList = await frameModel.read();
+      expect(framesList).to.deep.equal(framesWithIdListMock);
     });
   });
 
