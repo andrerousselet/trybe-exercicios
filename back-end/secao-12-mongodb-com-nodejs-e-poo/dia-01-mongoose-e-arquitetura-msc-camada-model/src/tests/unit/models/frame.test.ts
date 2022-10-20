@@ -11,6 +11,7 @@ describe('Frame Model', () => {
 		sinon.stub(Model, 'create').resolves(frameMockWithId);
 		sinon.stub(Model, 'findOne').resolves(frameMockWithId);
 		sinon.stub(Model, 'find').resolves(framesWithIdListMock);
+		sinon.stub(Model, 'findByIdAndDelete').resolves(frameMockWithId);
 	});
 
 	after(() => {
@@ -30,12 +31,15 @@ describe('Frame Model', () => {
       expect(foundFrame).to.deep.equal(frameMockWithId);
     });
 
-    it('_id not found', async () => {
+    it('invalid _id', async () => {
+      let err: any;
       try {
         await frameModel.readOne('qualquer_id_errado')
       } catch (error: any) {
-        expect(error.message).to.equal('InvalidMongoId')
+        err = error;
       }
+      expect(err).not.to.be.undefined;
+      expect(err.message).to.equal('InvalidMongoId')
     });
   });
 
@@ -43,6 +47,24 @@ describe('Frame Model', () => {
     it('successfuly found', async () => {
       const framesList = await frameModel.read();
       expect(framesList).to.deep.equal(framesWithIdListMock);
+    });
+  });
+
+  describe('Deleting a frame', () => {
+    it('successfuly deleted', async () => {
+      const deletedFrame = await frameModel.destroy('62cf1fc6498565d94eba52cd');
+      expect(deletedFrame).to.deep.equal(frameMockWithId);
+    });
+
+    it('invalid _id', async () => {
+      let err: any;
+      try {
+        await frameModel.destroy('qualquer_id_errado')
+      } catch (error: any) {
+        err = error;
+      }
+      expect(err).not.to.be.undefined;
+      expect(err.message).to.equal('InvalidMongoId')
     });
   });
 

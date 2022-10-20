@@ -11,6 +11,7 @@ describe('Lens Model', () => {
 		sinon.stub(Model, 'create').resolves(lensMockWithId);
 		sinon.stub(Model, 'findOne').resolves(lensMockWithId);
 		sinon.stub(Model, 'find').resolves(lensWithIdListMock);
+		sinon.stub(Model, 'findByIdAndDelete').resolves(lensMockWithId);
 	});
 
 	after(() => {
@@ -30,7 +31,7 @@ describe('Lens Model', () => {
       expect(foundLens).to.deep.equal(lensMockWithId);
     });
 
-    it('_id not found', async () => {
+    it('invalid _id', async () => {
       try {
         await lensModel.readOne('qualquer_id_errado')
       } catch (error: any) {
@@ -43,6 +44,24 @@ describe('Lens Model', () => {
     it('successfuly found', async () => {
       const lensList = await lensModel.read();
       expect(lensList).to.deep.equal(lensWithIdListMock);
+    });
+  });
+
+  describe('Deleting a lens', () => {
+    it('successfuly deleted', async () => {
+      const deletedFrame = await lensModel.destroy('62cf1fc6498565d94eba52cd');
+      expect(deletedFrame).to.deep.equal(lensMockWithId);
+    });
+
+    it('invalid _id', async () => {
+      let err: any;
+      try {
+        await lensModel.destroy('qualquer_id_errado')
+      } catch (error: any) {
+        err = error;
+      }
+      expect(err).not.to.be.undefined;
+      expect(err.message).to.equal('InvalidMongoId')
     });
   });
 
