@@ -17,8 +17,8 @@ describe('Frame Controller', () => {
   const res = {} as Response;
 
   before(() => {
-    sinon.stub(frameService, 'create').resolves(frameMock);
-    sinon.stub(frameService, 'readOne').resolves(frameMock);
+    sinon.stub(frameService, 'create').resolves(frameMockWithId);
+    sinon.stub(frameService, 'readOne').resolves(frameMockWithId);
     sinon.stub(frameService, 'read').resolves(framesWithIdListMock);
 
     res.status = sinon.stub().returns(res);
@@ -36,7 +36,7 @@ describe('Frame Controller', () => {
       // o cast de `res.status` é feito pois `res` foi criado como do tipo `Response` 
       // e agora, que queremos validar com o que foi chamado, precisa ser tratado como um `sinon.SinonStub`
       expect((res.status as sinon.SinonStub).calledWith(201)).to.be.true;
-      expect((res.json as sinon.SinonStub).calledWith(frameMock)).to.be.true;
+      expect((res.json as sinon.SinonStub).calledWith(frameMockWithId)).to.be.true;
     });
   });
 
@@ -47,7 +47,7 @@ describe('Frame Controller', () => {
       await frameController.readOne(req, res);
 
       expect((res.status as sinon.SinonStub).calledWith(200)).to.be.true;
-      expect((res.json as sinon.SinonStub).calledWith(frameMock)).to.be.true;
+      expect((res.json as sinon.SinonStub).calledWith(frameMockWithId)).to.be.true;
     });
   });
 
