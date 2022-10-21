@@ -31,7 +31,6 @@ class FrameService implements IService<IFrame> {
 
   public async read(): Promise<IFrame[]> {
     const frameList = await this._frame.read();
-    if (!frameList) throw new Error(ErrorTypes.EntityNotFound);
     return frameList;
   }
 }
