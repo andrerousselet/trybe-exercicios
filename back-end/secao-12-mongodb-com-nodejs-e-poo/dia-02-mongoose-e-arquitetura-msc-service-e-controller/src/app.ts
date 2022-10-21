@@ -6,7 +6,7 @@ import frameRouter from './routes/frame';
 const app = express();
 app.use(express.json());
 
-app.use('/frame', frameRouter);
+app.use(frameRouter);
 app.use(errorHandler);
 
 export default app;
